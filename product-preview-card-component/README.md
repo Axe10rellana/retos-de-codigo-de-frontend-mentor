@@ -24,7 +24,7 @@ Código base de la interfaz Product Preview Card Component Hecha en React.js y T
 
 ## Enlace A La Aplicación
 
-- [Testimonials Grid Section](https://axe10rellana-product-card-component.netlify.app/)
+- [Product Preview Card Component](https://axe10rellana-product-card-component.netlify.app/)
 
 ---
 

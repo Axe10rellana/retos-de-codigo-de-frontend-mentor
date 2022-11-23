@@ -30,6 +30,7 @@ Código base de la interfaz Testimonials Grid Section Hecha en React.js y Tailwi
 
 ## Comandos
 
+- npm i
 - npm run dev
 - npm run build
 

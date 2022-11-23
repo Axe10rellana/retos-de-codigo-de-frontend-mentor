@@ -24,7 +24,7 @@ Código base de la interfaz Notifications Page Hecha en React.js y Tailwind CSS.
 
 ## Enlace A La Aplicación
 
-- [Testimonials Grid Section](https://axe10rellana-notifications-page.netlify.app/)
+- [Notifications Page](https://axe10rellana-notifications-page.netlify.app/)
 
 ---
 

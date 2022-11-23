@@ -24,7 +24,7 @@ Código base de la interfaz QR Code Component Hecha en React.js y Tailwind CSS.
 
 ## Enlace A La Aplicación
 
-- [Testimonials Grid Section](https://axe10rellana-qr-code-component.netlify.app/)
+- [QR Code Component](https://axe10rellana-qr-code-component.netlify.app/)
 
 ---
 

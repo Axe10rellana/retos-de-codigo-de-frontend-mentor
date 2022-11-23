@@ -30,6 +30,7 @@ Código base de la interfaz Ecommerce Hecha en React.js y Tailwind CSS.
 
 ## Comandos
 
+- npm i
 - npm run dev
 - npm run build
 

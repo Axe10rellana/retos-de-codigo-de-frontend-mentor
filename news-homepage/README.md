@@ -24,7 +24,7 @@ Código base de la interfaz News Homepage Hecha en React.js y Tailwind CSS.
 
 ## Enlace A La Aplicación
 
-- [Testimonials Grid Section](https://axe10rellana-news-homepage.netlify.app/)
+- [News Homepage](https://axe10rellana-news-homepage.netlify.app/)
 
 ---
 
