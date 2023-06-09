@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input-gradient:focus {
+  border-color: rgb(100, 72, 254);
+  border-color: linear-gradient(
+    135deg,
+    rgba(100, 72, 254, 1) 0%,
+    rgba(96, 5, 148, 1) 100%
+  );
+}
+
+.front-card {
+  position: absolute;
+  top: 180px;
+  background: url("../assets/images/bg-card-front.png") no-repeat center/cover;
+  height: 230px;
+  width: 320px;
+  border-radius: 10px;
+  z-index: 20;
+}
+
+.back-card {
+  position: absolute;
+  right: 20px;
+  background: url("../assets/images/bg-card-back.png") no-repeat center/cover;
+  height: 230px;
+  width: 320px;
+  border-radius: 10px;
+}
+
+.back-card p {
+  top: 6.15rem;
+}
+
+@media screen and (max-width: 360px) {
+  .front-card,
+  .back-card {
+    height: 100px;
+    width: 65%;
+    border-radius: 20px;
+  }
+
+  .front-card {
+    top: 180px;
+  }
+
+  .back-card {
+    margin-top: 40px;
+    top: 0;
+  }
+
+  .back-card p {
+    top: 90px;
+    right: 50px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .front-card,
+  .back-card {
+    height: 140px;
+    width: 65%;
+    border-radius: 20px;
+  }
+
+  .front-card {
+    top: 140px;
+  }
+
+  .back-card {
+    margin-top: 40px;
+    top: 0;
+  }
+
+  .back-card p {
+    top: 55px;
+    right: 60px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .front-card,
+  .back-card {
+    height: 250px;
+    width: 500px;
+    position: relative;
+  }
+
+  .front-card {
+    top: 0;
+  }
+
+  .back-card {
+    right: 0;
+  }
+
+  .back-card p {
+    top: 110px;
+    right: 50px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .front-card,
+  .back-card {
+    height: 300px;
+    width: 500px;
+    position: relative;
+  }
+
+  .front-card {
+    top: 30px;
+  }
+
+  .back-card {
+    right: 0;
+  }
+
+  .back-card p {
+    top: 135px;
+    right: 30px;
+  }
+}

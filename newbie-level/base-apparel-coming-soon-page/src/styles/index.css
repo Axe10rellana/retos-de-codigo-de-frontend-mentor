@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Esto es desktop */
+@media screen and (min-width: 1180px) {
+  .bg-pattern {
+    background-image: url("../assets/images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: top 0 left 0;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .bg-pattern {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 245, 245, 1) 100%
+    );
+  }
+}

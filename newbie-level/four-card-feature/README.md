@@ -1,0 +1,52 @@
+# Four Card Feature Section
+
+## Descripción
+
+Código base de la interfaz Four Card Feature Section Hecha en React.js y Tailwind CSS.
+
+---
+
+## Vista En Versión Desktop
+
+![Vista_En_Versión_Desktop](src/assets/design/desktop-preview.jpg)
+
+## Vista En Versión Mobile
+
+![Vista_En_Versión_Mobile](src/assets/design/mobile-design.jpg)
+
+---
+
+## Enlace Del Desafío FrontEnd Mentor
+
+- [Revisa el desafío aca](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK)
+
+---
+
+## Enlace A La Aplicación
+
+- [Four Card Feature Section](https://axe10rellana-four-card-feature.netlify.app/)
+
+---
+
+## Comandos
+
+- npm i
+- npm run dev
+- npm run build
+
+---
+
+## Dependencias
+
+- React
+
+---
+
+## Dependencias De Desarrollo
+
+- Autoprefixer
+- Post CSS
+- Pretier
+- Pretier Plugin Tailwind CSS
+- Tailwind CSS
+- Vite

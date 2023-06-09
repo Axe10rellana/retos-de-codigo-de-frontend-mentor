@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Esto es desktop */
+@media screen and (min-width: 375px) {
+  .bg-pattern {
+    background-image: url("../assets/images/bg-intro-desktop.png");
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .bg-pattern {
+    background-image: url("../assets/images/bg-intro-mobile.png");
+    background-repeat: no-repeat;
+  }
+}

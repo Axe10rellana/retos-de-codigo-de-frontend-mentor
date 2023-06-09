@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media screen and (min-width: 768px) {
+  .poligon {
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 75%,
+      57% 76%,
+      50% 100%,
+      41% 75%,
+      0% 75%
+    );
+  }
+}
