@@ -28,7 +28,7 @@ const InputNumberOfPeople = ({
               ? "border-red-500/80 focus:border-red-500/80"
               : "border-very-light-grayish-cyan focus:border-strong-cyan"
           }`}
-          type="text"
+          type="number"
           name="numberPeople"
           id="numberPeople"
           placeholder="0"

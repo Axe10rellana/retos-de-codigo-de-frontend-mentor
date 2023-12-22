@@ -25,7 +25,12 @@ const App = () => {
 
   //functions
   const handleBillAmountChange = (value) => {
-    if (value <= 0 || isNaN(value)) {
+    if (isNaN(value)) {
+      setBillAmount("");
+      return;
+    }
+
+    if (value <= 0) {
       setBillAmountError("Can't be zero");
     } else {
       setBillAmountError("");
@@ -34,7 +39,12 @@ const App = () => {
   };
 
   const handleNumberOfPeopleChange = (value) => {
-    if (value <= 0 || isNaN(value) || !Number.isInteger(value)) {
+    if (isNaN(value)) {
+      setNumberOfPeople("");
+      return;
+    }
+
+    if (value <= 0) {
       setNumberOfPeopleError("Can't be zero");
     } else {
       setNumberOfPeopleError("");
@@ -43,10 +53,14 @@ const App = () => {
   };
 
   const handleTipButtonClick = (tipPercentage) => {
-    if (billAmount === "" || numberOfPeople === "") return;
     if (billAmountError || numberOfPeopleError) {
       setTipAmount("$0.00");
       setTotalAmount("$0.00");
+      return;
+    }
+
+    if (billAmount === "" || numberOfPeople === "") {
+      resetEverything();
       return;
     }
 
@@ -65,6 +79,11 @@ const App = () => {
       return;
     }
     if (customTipPercentage === "" || customTipPercentage <= 0) {
+      return;
+    }
+
+    if (billAmount === "" || numberOfPeople === "") {
+      resetEverything();
       return;
     }
 
