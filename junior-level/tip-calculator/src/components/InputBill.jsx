@@ -1,7 +1,14 @@
+//context
+import { useTipCalculator } from "../context/TipCalculatorContext";
+
 //assets
 import dollar from "../assets/icons/icon-dollar.svg";
 
-const InputBill = ({ billAmountError, billAmount, handleBillAmountChange }) => {
+const InputBill = () => {
+  //context variables
+  const { billAmountError, billAmount, handleBillAmountChange } =
+    useTipCalculator();
+
   return (
     <div className="flex flex-col gap-y-4">
       <div className="flex flex-row justify-between">

@@ -1,4 +1,10 @@
-const CustomButton = ({ id, selectedButton, handleClick, children }) => {
+//context
+import { useTipCalculator } from "../context/TipCalculatorContext";
+
+const CustomButton = ({ id, children }) => {
+  //context variables
+  const { selectedButton, handleTipButtonClick } = useTipCalculator();
+
   return (
     <button
       className={`w-full border-none py-2 px-4 cursor-pointer rounded-lg text-[24px] ${
@@ -7,7 +13,7 @@ const CustomButton = ({ id, selectedButton, handleClick, children }) => {
           : "bg-very-dark-cyan text-white hover:bg-light-grayish-cyan hover:text-very-dark-cyan"
       }`}
       type="button"
-      onClick={() => handleClick(id)}
+      onClick={() => handleTipButtonClick(id)}
     >
       {children}
     </button>

@@ -1,11 +1,14 @@
+//context
+import { useTipCalculator } from "../context/TipCalculatorContext";
+
 //assets
 import person from "../assets/icons/icon-person.svg";
 
-const InputNumberOfPeople = ({
-  numberOfPeopleError,
-  numberOfPeople,
-  handleNumberOfPeopleChange,
-}) => {
+const InputNumberOfPeople = () => {
+  //context variables
+  const { numberOfPeople, numberOfPeopleError, handleNumberOfPeopleChange } =
+    useTipCalculator();
+
   return (
     <div className="flex flex-col gap-y-4">
       <div className="flex flex-row justify-between">

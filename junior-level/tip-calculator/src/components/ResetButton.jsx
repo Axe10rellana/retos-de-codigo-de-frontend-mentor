@@ -1,4 +1,10 @@
-const ResetButton = ({ isValid, resetEverything }) => {
+//context
+import { useTipCalculator } from "../context/TipCalculatorContext";
+
+const ResetButton = () => {
+  //context variables
+  const { isValid, resetEverything } = useTipCalculator();
+
   return isValid ? (
     <button
       type="submit"

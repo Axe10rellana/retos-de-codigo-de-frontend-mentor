@@ -1,4 +1,10 @@
-const BillDetails = ({ totalAmount, tipAmount }) => {
+//context
+import { useTipCalculator } from "../context/TipCalculatorContext";
+
+const BillDetails = () => {
+  //context variables
+  const { totalAmount, tipAmount } = useTipCalculator();
+
   return (
     <div className="flex flex-col gap-y-4">
       <div className="flex flex-row justify-between">
