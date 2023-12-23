@@ -7,9 +7,9 @@ import { Calculator, Logo } from "./components";
 const App = () => {
   //state variables
   const [isValid, setIsValid] = useState(false);
+  const [selectedButton, setSelectedButton] = useState(null);
   const [billAmountError, setBillAmountError] = useState("");
   const [numberOfPeopleError, setNumberOfPeopleError] = useState("");
-  const [selectedButton, setSelectedButton] = useState(null);
   const [billAmount, setBillAmount] = useState("");
   const [numberOfPeople, setNumberOfPeople] = useState("");
   const [customTipPercentage, setCustomTipPercentage] = useState("");
@@ -19,7 +19,10 @@ const App = () => {
   //useEffect
   useEffect(() => {
     setIsValid(
-      billAmount !== "" && numberOfPeople !== "" && selectedButton !== null
+      (billAmount !== "" || numberOfPeople !== "") &&
+        parseFloat(billAmount) > 0 &&
+        parseInt(numberOfPeople) > 0 &&
+        selectedButton !== null
     );
   }, [billAmount, numberOfPeople, selectedButton]);
 
@@ -32,6 +35,7 @@ const App = () => {
 
     if (value <= 0) {
       setBillAmountError("Can't be zero");
+      setBillAmount(0);
     } else {
       setBillAmountError("");
       setBillAmount(value);
@@ -46,6 +50,7 @@ const App = () => {
 
     if (value <= 0) {
       setNumberOfPeopleError("Can't be zero");
+      setNumberOfPeople(0);
     } else {
       setNumberOfPeopleError("");
       setNumberOfPeople(value);
@@ -56,6 +61,11 @@ const App = () => {
     if (billAmountError || numberOfPeopleError) {
       setTipAmount("$0.00");
       setTotalAmount("$0.00");
+      return;
+    }
+
+    if (parseFloat(billAmount) === 0 && parseInt(numberOfPeople) === 0) {
+      resetEverything();
       return;
     }
 
@@ -79,6 +89,11 @@ const App = () => {
       return;
     }
     if (customTipPercentage === "" || customTipPercentage <= 0) {
+      return;
+    }
+
+    if (parseFloat(billAmount) === 0 && parseInt(numberOfPeople) === 0) {
+      resetEverything();
       return;
     }
 
