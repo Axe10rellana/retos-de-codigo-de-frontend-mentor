@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+/* Logo-mastercraft */
+.mastercraft-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Not-last-link */
+.link:not(:last-child) {
+  @apply border-b border-gray-200;
+}
+
+/* Not-last-stat */
+.progress-bar-info:not(:last-child) {
+  @apply border-b border-gray-200 pb-3 md:pb-0 md:pr-6 lg:pr-11 md:border-r md:border-b-0;
+}
+
+
+/* Close-modal-icon */
+.close-modal-icon {
+  opacity: 0.4;
+}
+
+.close-modal-icon:hover {
+  opacity: 1;
+}
+
+/* Bookmark-button */
+circle {
+  transition: all 0.3s ease-out;
+}
+
+.bookmark-icon:hover svg circle {
+  fill: #7a7a7a;
+}
+
+/* Reward-title-modal */
+.reward-title-modal .radio-button-modal {
+  @apply w-6 h-6 appearance-none rounded-full ring-2 ring-gray-300 transition-all duration-300;
+}
+
+.reward-title-modal .title {
+  @apply font-bold text-black transition-all duration-300;
+}
+
+.reward-title-modal .pledge-amount {
+  @apply text-moderate-cyan transition-all duration-300;
+}
+
+.reward-title-modal:hover .title,
+.reward-title-modal:hover .pledge-amount,
+.reward-title-modal:hover .radio-button-modal {
+  font-weight: bold;
+  color: hsl(176, 50%, 47%);
+  --tw-ring-opacity: 1;
+  --tw-ring-color: hsl(176, 50%, 47%, var(--tw-ring-opacity));
+}
+
+/* Radio-button-selected-classes */
+.selected-cursor-default {
+  cursor: default !important;
+}
+
+.selected-title-color {
+  color: #000 !important;
+  font-weight: bold;
+}
+
+.selected-pledge-color {
+  font-weight: normal !important;
+}
