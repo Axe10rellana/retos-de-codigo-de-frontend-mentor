@@ -112,13 +112,17 @@ const GetStartedModalRewardCard = ({
                   $
                 </span>
                 <input
-                  className="font-bold text-black border-[3px] border-gray-300 py-4 md:px-8 lg:px-10 rounded-full placeholder:text-black focus:outline-moderate-cyan w-[100%] focus:cursor-pointer pl-8"
+                  className="font-bold text-black border-[3px] border-gray-300 py-4 md:px-8 lg:px-10 rounded-full placeholder:text-gray-400 focus:outline-moderate-cyan w-[100%] focus:cursor-pointer pl-8"
                   type="text"
                   name="pledge"
                   id="pledge"
                   autoComplete="off"
-                  placeholder={pledgeAmount}
-                  value={radioValues[selectedOption] || ""}
+                  placeholder="0"
+                  value={
+                    radioValues[selectedOption] !== undefined
+                      ? radioValues[selectedOption]
+                      : pledgeAmount
+                  }
                   onChange={(e) => handleInputIntegerNumbers(e, selectedOption)}
                   required
                 />
@@ -165,13 +169,17 @@ const GetStartedModalRewardCard = ({
                   $
                 </span>
                 <input
-                  className="font-bold text-black border-[3px] border-gray-300 py-4 rounded-full placeholder:text-black focus:outline-moderate-cyan w-[100%] focus:cursor-pointer pl-8"
+                  className="font-bold text-black border-[3px] border-gray-300 py-4 rounded-full placeholder:text-gray-400 focus:outline-moderate-cyan w-[100%] focus:cursor-pointer pl-8"
                   type="text"
                   name="pledge"
                   id="pledge"
                   autoComplete="off"
-                  placeholder={pledgeAmount}
-                  value={radioValues[selectedOption] || ""}
+                  placeholder="0"
+                  value={
+                    radioValues[selectedOption] !== undefined
+                      ? radioValues[selectedOption]
+                      : pledgeAmount
+                  }
                   onChange={(e) => handleInputIntegerNumbers(e, selectedOption)}
                   required
                 />

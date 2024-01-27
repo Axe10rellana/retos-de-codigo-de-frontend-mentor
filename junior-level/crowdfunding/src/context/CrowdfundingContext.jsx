@@ -40,6 +40,10 @@ export const CrowdfundingProvider = ({ children }) => {
     }));
   };
   const handleButtonContinue = () => {
+    const pledgeInput = document.getElementById("pledge");
+    const inputValue = pledgeInput.value.trim();
+
+    if (inputValue === "") return;
     setModalIsOpen(false);
   };
 
