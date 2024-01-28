@@ -1,10 +1,16 @@
-//data
-import { stats } from "../data/data";
+//context
+import { useCrowdfunding } from "../context/CrowdfundingContext";
 
 //components
 import { DiscoverProgressBar, DiscoverProgressBarInfo } from ".";
 
 const Discover = () => {
+  //context variables
+  const { stats } = useCrowdfunding();
+
+  //variables
+  let firstAmount = stats[0].amount;
+
   return (
     <>
       <section
@@ -17,6 +23,7 @@ const Discover = () => {
               key={id}
               amount={amount}
               information={information}
+              firstAmount={firstAmount}
             />
           ))}
         </div>

@@ -6,7 +6,7 @@ import check from "../assets/icons/icon-check.svg";
 
 const AboutModalCompleted = () => {
   //context variables
-  const { modalCompletedIsOpen, handleModalCompletedIsClosed } =
+  const { modalCompletedIsOpen, handleModalCompletedIsClosed, selectedModal } =
     useCrowdfunding();
 
   //variables
@@ -32,7 +32,7 @@ const AboutModalCompleted = () => {
         </p>
         <button
           className="w-28 py-4 mx-auto font-bold rounded-full text-sm transition-all duration-300 text-white bg-moderate-cyan hover:bg-dark-cyan"
-          onClick={handleModalCompletedIsClosed}
+          onClick={() => handleModalCompletedIsClosed(selectedModal)}
         >
           Got it!
         </button>

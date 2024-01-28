@@ -55,20 +55,20 @@ export const rewards = [
   },
 ];
 
-export const stats = [
+export const originalStats = [
   {
     id: 1,
-    amount: "$89,914",
+    amount: 89.914,
     information: "of $100,000 backed",
   },
   {
     id: 2,
-    amount: "5,007",
+    amount: 5.007,
     information: "total backers",
   },
   {
     id: 3,
-    amount: "56",
+    amount: 56,
     information: "days left",
   },
 ];

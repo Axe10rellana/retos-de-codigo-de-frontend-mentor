@@ -32,6 +32,7 @@ const About = () => {
               }) => (
                 <AboutRewardCard
                   key={id}
+                  id={id}
                   title={title}
                   pledgeAmount={pledgeAmount}
                   description={description}

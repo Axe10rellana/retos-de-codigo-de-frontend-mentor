@@ -63,12 +63,13 @@ const GetStartedModalRewardCard = ({
             )}
           </div>
         </div>
-        {quantityLeft !== null && (
+        {selectedOption === title && quantityLeft !== null && (
           <div className="hidden md:flex flex-row gap-x-4 items-center">
             <h2
               className={`font-bold md:text-sm lg:text-lg ${
                 disabled ? "text-dark-gray" : "text-black"
               }`}
+              id="quantity"
             >
               {quantityLeft}
             </h2>
@@ -149,6 +150,7 @@ const GetStartedModalRewardCard = ({
             className={`font-bold ${
               disabled ? "text-dark-gray" : "text-black"
             }`}
+            id="quantity"
           >
             {quantityLeft}
           </h2>

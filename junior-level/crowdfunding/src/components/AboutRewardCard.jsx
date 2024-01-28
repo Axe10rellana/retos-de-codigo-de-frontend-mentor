@@ -2,6 +2,7 @@
 import { useCrowdfunding } from "../context/CrowdfundingContext";
 
 const AboutRewardCard = ({
+  id,
   title,
   pledgeAmount,
   description,
@@ -9,7 +10,7 @@ const AboutRewardCard = ({
   disabled,
 }) => {
   //context variables
-  const { handleModalCompletedIsOpen } = useCrowdfunding();
+  const { handleModalCompletedIsOpen, selectedModal } = useCrowdfunding();
 
   return (
     <div
@@ -27,6 +28,7 @@ const AboutRewardCard = ({
           className={`${
             disabled ? "text-moderate-cyan/50" : "text-moderate-cyan"
           }`}
+          id={selectedModal === id ? "pledgeAbout" : undefined}
         >
           Pledge ${pledgeAmount} or more
         </p>
@@ -40,6 +42,7 @@ const AboutRewardCard = ({
             className={`font-bold text-4xl md:text-3xl lg:text-4xl ${
               disabled ? "text-dark-gray" : "text-black"
             }`}
+            id={selectedModal === id ? "quantityAbout" : undefined}
           >
             {quantityLeft}
           </h2>
@@ -54,7 +57,7 @@ const AboutRewardCard = ({
               ? "bg-dark-gray/50 cursor-not-allowed"
               : "bg-moderate-cyan hover:bg-dark-cyan"
           }`}
-          onClick={handleModalCompletedIsOpen}
+          onClick={() => handleModalCompletedIsOpen(id)}
         >
           {disabled ? "Out of stock" : "Select Reward"}
         </button>
