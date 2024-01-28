@@ -120,6 +120,7 @@ export const CrowdfundingProvider = ({ children }) => {
     });
 
     setSelectedOption(null);
+    setRadioValues({});
     setModalIsOpen(false);
   };
 
