@@ -1,16 +1,20 @@
 const DiscoverProgressBarInfo = ({ amount, information, firstAmount }) => {
   //variables
   let number = 0;
+  let formattedAmount;
 
+  //validations
   if (amount % 1 !== 0) {
-    number = amount.toFixed(3);
+    number = parseFloat(amount.toFixed(3));
+    if(number === firstAmount) {
+      formattedAmount = `$${number.toString().replace(".", ",").toLocaleString()}`;
+    }else {
+      formattedAmount = number.toString().replace(".", ",").toLocaleString();
+    }
   } else {
     number = amount;
+    formattedAmount = number.toString().toLocaleString();
   }
-
-  let formattedAmount = number.toString().replace(".", ",").toLocaleString();
-
-  if (number === firstAmount) formattedAmount = `$${formattedAmount}`;
 
   return (
     <div className="flex flex-col gap-y-3 progress-bar-info">
