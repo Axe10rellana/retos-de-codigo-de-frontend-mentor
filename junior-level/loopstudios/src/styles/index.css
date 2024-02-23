@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* bg-header */
+.bg-header {
+  background-image: url('../assets/images/mobile/image-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+/* Menu-mobile */
+.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.closed {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.transition-all-menu {
+  transition: all 0.4s ease;
+}
+
+/* responsive-aling-padding-bottom */
+.responsive-aling {
+  padding-bottom: 13rem;
+}
+
+/* mediaqueries */
+@media (min-width: 500px) {
+  .responsive-aling {
+    padding-bottom: 6rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .bg-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/images/desktop/image-hero.jpg');
+  }
+}
